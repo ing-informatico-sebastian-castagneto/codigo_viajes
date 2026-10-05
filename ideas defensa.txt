@@ -1,0 +1,64 @@
+Incluye
+Inicio de sesión y registro
+Contraseñas protegidas con PBKDF2 + SHA-256
+Base de datos SQLite
+Pestaña Destinos
+Crear
+Modificar
+Eliminar
+Marcar como no disponible
+Pestaña Paquetes
+Combinar entre 2 y 5 destinos
+Fechas
+Cupo
+Margen
+Cálculo automático del precio
+Publicación
+Pestaña Mis reservas
+Crear reservas
+Validación de cupos
+Validación de fecha
+Historial propio
+Pestaña Administración
+Validaciones de datos
+RUT y teléfono no aparecen en los listados
+El precio del paquete queda fijado, tal como pide el caso.
+Se respetan las reglas de cupos, reservas y fechas del caso.
+Descargar proyecto
+
+Descargar Viajes Aventura para Visual Studio Code
+
+Dentro encontrarás:
+
+Viajes_Aventura/
+│
+├── main.py
+├── database.py
+├── auth.py
+├── models.py
+├── README.md
+├── .gitignore
+│
+└── views/
+    ├── __init__.py
+    ├── login.py
+    └── main_window.py
+Para ejecutarlo
+
+Abre la carpeta en Visual Studio Code y en la terminal escribe:
+
+python main.py
+
+No necesitas instalar librerías externas.
+
+Administrador de prueba:
+
+Correo: admin@viajesaventura.cl
+Contraseña: Admin123!
+
+También puedes crear un usuario normal desde Crear cuenta.
+
+Lo hice con un estilo de código simple y entendible para una defensa, sin meter frameworks innecesarios ni una arquitectura exageradamente compleja.
+
+Te quedaste sin archivos adjuntos por ahora. Inicia una prueba gratuita de Plus para obtener más o vuelve a intentarlo mañana después de este horario: 11:37 a.m..
+Prueba Plus gratis
