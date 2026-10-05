@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explora destinos y reserva tu próxima aventura con Viajes Aventura."
+    />
+    <meta name="theme-color" content="#f7f8f4" />
+    <title>Viajes Aventura | Explora Chile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Viajes Aventura, inicio">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span>viajes<span class="brand-light">aventura</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="nav-link active" href="#inicio">Inicio</a>
+        <a class="nav-link" href="#paquetes">Paquetes</a>
+        <a class="nav-link" href="#destinos">Destinos</a>
+      </nav>
+      <a class="header-action" href="#paquetes">
+        Encuentra tu viaje <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Tu próxima historia comienza aquí</span>
+          <h1>El mundo es<br />demasiado lindo<br />para quedarse <em>quieto.</em></h1>
+          <p>
+            Escápate de la rutina. Descubre rincones increíbles y vive cada
+            destino a tu manera.
+          </p>
+          <a class="button button-light" href="#paquetes">
+            Explorar viajes <span aria-hidden="true">↓</span>
+          </a>
+          <div class="hero-social">
+            <div class="avatar-stack" aria-hidden="true">
+              <span>J</span><span>M</span><span>C</span><span>+</span>
+            </div>
+            <span><strong>Viajeros felices</strong><br />aventuras que se quedan contigo</span>
+          </div>
+        </div>
+        <div class="hero-art" role="img" aria-label="Montañas y naturaleza de la Patagonia">
+          <div class="hero-art-shade"></div>
+          <div class="hero-caption">
+            <span>01 — PATAGONIA CHILENA</span>
+            <strong>Donde la naturaleza<br />te deja sin palabras.</strong>
+          </div>
+          <div class="hero-stamp"><span>VIAJA</span><span>CON</span><strong>ALMA</strong></div>
+          <span class="hero-coordinate">50°56' S &nbsp; 73°24' O</span>
+        </div>
+      </section>
+
+      <section class="stats-strip" aria-label="Indicadores de viajes">
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">⌖</span>
+          <span><strong id="stat-destinations">—</strong><small>destinos por descubrir</small></span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">✳</span>
+          <span><strong id="stat-packages">—</strong><small>viajes disponibles</small></span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">♧</span>
+          <span><strong id="stat-travelers">—</strong><small>viajeros con reserva</small></span>
+        </div>
+        <div class="api-status">
+          <span class="status-dot" id="api-status-dot"></span>
+          <span id="api-status-text" aria-live="polite">Conectando con la API…</span>
+        </div>
+      </section>
+
+      <section class="section packages-section" id="paquetes">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow eyebrow-dark">HECHOS PARA EXPLORAR</span>
+            <h2>Tu próxima aventura</h2>
+            <p>Pequeños grupos, grandes historias. Elige tu próximo destino.</p>
+          </div>
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="package-search" type="search" placeholder="Buscar un viaje…" aria-label="Buscar paquetes" />
+          </label>
+        </div>
+        <div class="package-grid" id="package-grid" aria-live="polite">
+          <div class="loading-card">Preparando tus próximas aventuras…</div>
+        </div>
+        <div class="empty-state" id="package-empty" hidden>
+          <span aria-hidden="true">✳</span>
+          <h3>No encontramos ese viaje</h3>
+          <p>Prueba con otro destino o vuelve a intentarlo más tarde.</p>
+        </div>
+      </section>
+
+      <section class="section destinations-section" id="destinos">
+        <div class="destination-intro">
+          <span class="eyebrow eyebrow-dark">UN PAÍS, MIL PAISAJES</span>
+          <h2>Chile te espera<br />con los brazos abiertos.</h2>
+          <p>De norte a sur, hay un lugar que se va a quedar contigo.</p>
+          <a class="text-link" href="#paquetes">Ver todos los viajes <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="destination-list" id="destination-list" aria-live="polite">
+          <p class="muted-message">Cargando destinos…</p>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="cta-symbol" aria-hidden="true">✳</div>
+        <div>
+          <span class="eyebrow">TU PRÓXIMO RECUERDO</span>
+          <h2>Sal de la rutina.<br />Vuelve lleno de historias.</h2>
+        </div>
+        <a class="button button-light" href="#paquetes">Encuentra tu aventura <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="api-settings" aria-label="Configuración de conexión">
+        <div>
+          <strong>Conexión de la API</strong>
+          <p>Configura la dirección pública de tu backend para cargar los datos.</p>
+        </div>
+        <form id="api-form" class="api-form">
+          <label class="visually-hidden" for="api-url">URL de la API</label>
+          <input id="api-url" type="url" placeholder="https://tu-api.ejemplo.com" />
+          <button class="button button-dark" type="submit">Conectar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span>viajes<span class="brand-light">aventura</span></span>
+      </a>
+      <span>Hecho para explorar. © <span id="current-year"></span> Viajes Aventura.</span>
+      <a href="#inicio">Volver arriba ↑</a>
+    </footer>
+
+    <dialog class="booking-dialog" id="booking-dialog">
+      <form id="booking-form" class="booking-form">
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Cerrar">×</button>
+        <span class="eyebrow eyebrow-dark">RESERVA TU LUGAR</span>
+        <h2 id="booking-title">Una aventura te espera</h2>
+        <p id="booking-description"></p>
+        <label for="user-id">ID de usuario</label>
+        <input id="user-id" name="id_usuario" type="number" min="1" required placeholder="Ej. 1" />
+        <label for="booking-people">Cantidad de personas</label>
+        <input id="booking-people" name="cantidad_personas" type="number" min="1" value="1" required />
+        <p class="form-message" id="booking-message" aria-live="polite"></p>
+        <button class="button button-dark booking-submit" type="submit">Confirmar reserva <span aria-hidden="true">↗</span></button>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
